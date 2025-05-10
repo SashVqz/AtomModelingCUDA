@@ -3,14 +3,25 @@
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
+#include <GL/glew.h>
+
+enum Camera_Movement {
+    FORWARD,
+    BACKWARD,
+    LEFT,
+    RIGHT,
+    UP,
+    DOWN
+};
 
 class Camera {
 public:
     Camera(glm::vec3 position, glm::vec3 up, float yaw, float pitch);
 
     glm::mat4 GetViewMatrix();
-    void ProcessKeyboard(float deltaTime);
+    void ProcessKeyboard(Camera_Movement direction, float deltaTime);
     void ProcessMouseMovement(float xoffset, float yoffset, GLboolean constrainPitch = true);
+    void ProcessMouseScroll(float yoffset);
     
     glm::vec3 Position;
     glm::vec3 Front;
@@ -23,6 +34,10 @@ public:
 
     float MovementSpeed;
     float MouseSensitivity;
+    float Zoom;
+
+private:
+    void updateCameraVectors();
 };
 
 #endif

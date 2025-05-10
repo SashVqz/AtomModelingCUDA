@@ -1,0 +1,57 @@
+# Build directories
+build/
+debug/
+release/
+
+# Compiled files
+*.o
+*.obj
+*.exe
+ParticleSimulation3D
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# IDE specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.log
+*.tmp
+
+# CUDA compilation files
+*.cudafe1.c
+*.cudafe1.cpp
+*.cudafe1.gpu
+*.cudafe1.stub.c
+*.fatbin
+*.ptx
+
+# Mac
+.DS_Store
+
+# Visual Studio
+*.vcxproj
+*.vcxproj.filters
+*.sln
+*.suo
+*.user
+Debug/
+Release/
+
+# Backup files
+*.bak
+*.backup
+
+# Package files
+*.deb
+*.rpm
+*.tar.gz
+*.zip
